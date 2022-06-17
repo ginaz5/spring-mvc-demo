@@ -11,5 +11,6 @@
 
      The message: ${msg}
 
+    <img src="${pageContext.request.contextPath}/resources/images/spring-mvc.png">
     </body>
 </html>
