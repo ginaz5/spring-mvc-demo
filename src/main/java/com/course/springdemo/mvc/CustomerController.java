@@ -34,7 +34,12 @@ public class CustomerController {
     @RequestMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
                               BindingResult theBindingResult) {
+        // console log
         System.out.println("Last name: |" + theCustomer.getLastName() + "|");
+        // default Spring MVC validation messages - typeMismatch.customer.freePasses is overridden by messages.properties
+        System.out.println("Binding result: " + theBindingResult);
+        System.out.println("\n\n");
+
         if (theBindingResult.hasErrors()) {
             return "customer-form";
         } else {
